@@ -34,7 +34,7 @@ class Adpter(object):
                 web_soup = BeautifulSoup(data.content, 'html.parser')
                 aa = web_soup.find_all("a")
                 pattern = "Contact Us"
-                hh = list(filter(lambda x: x.get_text()== pattern ,aa))
+                #hh = list(filter(lambda x: x.get_text()== pattern ,aa))
                 print(hh)
                 if hh != None:
                     obj["contact us URL"] = hh[0].get('href')
